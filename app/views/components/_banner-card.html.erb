@@ -1,14 +1,15 @@
 <%# banner %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('galaxy.jpg') %>);">
+<div class="banner " style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('galaxy.jpg') %>);">
   <div class="container">
     <h1>Discover our spaceships</h1>
     <p>Trips for many planets an moons, at an affordable price.</p>
+    <%= render "components/search-bar" %>
   </div>
 </div>
 
 <%# cards %>
 
-<div class="container my-3 px-3">
+<div class="container my-2 px-1">
   <div class="row">
     <div class="card-trip col-sm-4">
       <%= image_tag "martian.jpg" %>
