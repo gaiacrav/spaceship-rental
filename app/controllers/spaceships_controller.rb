@@ -3,15 +3,15 @@ class SpaceshipsController < ApplicationController
 before_action :set_spaceship, only: [:show]
 
   def index
-    @spaceship = Spaceship.all
+    @spaceships = Spaceship.all
   end
 
   def show
-    @reviews = Spaceship.reviews
+    @spaceship = Spaceship.find(params[:id])
   end
 
   def new
-    @spaceship = Spacehip.new
+    @spaceship = Spaceship.new
   end
 
   def create
@@ -21,18 +21,18 @@ before_action :set_spaceship, only: [:show]
     else
       render :new
     end
+ end
+
+  def destroy
+    @spaceship = Spaceship.find(params[:id])
+    @spaceship.destroy
+    redirect_to root_path
   end
 
   private
-
-  def set_spaceship
-    @spaceship = Spaceship.find(params[:id])
-  end
 
   def spaceship_params
     params.require(:spaceship).permit(:name, :destination, :price, :photo, :description)
   end
 end
 
-
-end
