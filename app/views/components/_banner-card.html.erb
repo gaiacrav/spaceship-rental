@@ -4,7 +4,7 @@
     <h1>Discover our spaceships</h1>
     <p>Trips for many planets an moons, at an affordable price.</p>
     <%= render "components/search-bar" %>
-    <button type="button" class="btn btn-outline-info btn-lg btn-block">All destinations</button>
+    <%= link_to "All destinations", spaceships_path, class: "btn btn-outline-info btn-lg btn-block" %>
   </div>
 </div>
 
