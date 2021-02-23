@@ -4,12 +4,16 @@
     <h1>Discover our spaceships</h1>
     <p>Trips for many planets an moons, at an affordable price.</p>
     <%= render "components/search-bar" %>
+    <button type="button" class="btn btn-outline-info btn-lg btn-block">All destinations</button>
   </div>
 </div>
 
 <%# cards %>
 
+
+
 <div class="container my-2 px-1">
+<h4 class="my-3"> Hot deals! </h4>
   <div class="row">
     <div class="card-trip col-sm-4">
       <%= image_tag "martian.jpg" %>
@@ -19,7 +23,7 @@
           <p>Our very best spaceship to get to mars in less than 10 hours </p>
         </div>
         <h2 class="card-trip-pricing">€100.000</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <%= image_tag "mars.jpg", class: "card-trip-user avatar-bordered" %>
       </div>
     </div>
 
@@ -32,7 +36,7 @@
           <p>Our very best spaceship to get to Venus in less than 18 hours </p>
         </div>
         <h2 class="card-trip-pricing">€150.000</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <%= image_tag "venus.jpg", class: "card-trip-user avatar-bordered" %>
       </div>
   </div>
 
@@ -44,7 +48,7 @@
           <p>Our very best spaceship to get to Saturn in less than 22 hours </p>
         </div>
         <h2 class="card-trip-pricing">€300.000</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <%= image_tag "saturn.jpg", class: "card-trip-user avatar-bordered" %>
       </div>
     </div>
   </div>
