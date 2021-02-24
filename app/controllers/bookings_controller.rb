@@ -15,8 +15,11 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @spaceship = Spaceship.find(params[:spaceship_id])
     @booking = Booking.new(booking_params)
-    #@booking.user = current.user
+    @booking.spaceship = @spaceship
+
+    @booking.user = current_user
     if @booking.save
       redirect_to booking_params(@booking)
     else
