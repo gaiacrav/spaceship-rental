@@ -1,0 +1,39 @@
+.spaceship-show-card-trip {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  .spaceship-show-card-trip > img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .spaceship-show-card-trip h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .spaceship-show-card-trip p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0;
+  }
+  
+  
+  .spaceship-show-card-trip .spaceship-show-card-trip-infos {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }
+  
+  .spaceship-show-card-trip-infos .spaceship-show-card-trip-user {
+    position: absolute;
+    right: 16px;
+    top: -40px;
+    width: 100px;
+  }
