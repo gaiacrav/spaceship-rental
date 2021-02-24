@@ -13,7 +13,7 @@
           <p class="card-trip-pricing"> SC <%= spaceship.price %> </p>
           <%= image_tag "mars.png", class: "card-trip-user avatar-bordered" %>
         </div>
-        <%= link_to "Book now", root_path, class: "btn btn-info p-1 m-2" %>
+        <%= link_to "Book now", spaceship_path(spaceship), class: "btn btn-info p-1 m-2" %>
       </div>
     <% end %>
   </div>
