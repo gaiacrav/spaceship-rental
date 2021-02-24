@@ -16,8 +16,9 @@ before_action :set_spaceship, only: [:show]
 
   def create
     @spaceship = Spaceship.new(spaceship_params)
+    @spaceship.user = current_user
     if @spaceship.save
-      redirect_to spaceship_params(@spaceship)
+      redirect_to spaceships_path
     else
       render :new
     end
