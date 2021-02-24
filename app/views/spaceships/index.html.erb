@@ -8,14 +8,14 @@
   <div class="row">
     <% @spaceships.each do |spaceship|  %>
       <div class="card-trip col-sm-4">
-        <%= image_tag "martian.jpg" %>
+        <%= image_tag "spaceship/BA-3000QX" %>
         <div class="card-trip-infos">
           <div>
             <h2> <%= spaceship.name %> </h2>
             <p> <%= spaceship.description %> </p>
             <p> Great deal! </p>
           </div>
-          <%= "€", spaceship.price, class: "card-trip-pricing" %>
+          <%=# spaceship.price, class: "card-trip-pricing" %>
           <%= image_tag "mars.jpg", class: "card-trip-user avatar-bordered" %>
         </div>
       </div>
