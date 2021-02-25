@@ -19,6 +19,14 @@ user_admin = User.create!(
     admin: true
   )
 
+user_gaia = User.create(
+    first_name: "Gaia",
+    last_name: "Cravesana",
+    email: "gcrave@gmail.com",
+    password: "lalaland",
+    admin: false
+)
+
 Spaceship.create(name: "Moon Light", destination: "moon", price: 8000, user_id:user_admin.id )
 Spaceship.create(name: "MarsX the red planet", destination: "mars", price: 70000, user_id:user_admin.id )
 Spaceship.create(name: "The smallest sun", destination: "mercury", price: 85000, user_id:user_admin.id )
