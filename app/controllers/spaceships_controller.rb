@@ -3,11 +3,16 @@ class SpaceshipsController < ApplicationController
 # before_action :set_spaceship, only: [:show]
 
   def index
-    @spaceships = Spaceship.all
+    if params[:query].present?
+      @spaceships = Spaceship.global_search(params[:query])
+    else
+      @spaceships = Spaceship.all
+    end
   end
 
   def show
     @spaceship = Spaceship.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
