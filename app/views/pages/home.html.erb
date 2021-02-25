@@ -1,7 +1,5 @@
 <%= render "components/banner-card" %>
 
-
-
 <% if current_user.admin %>
         <%= link_to "Delete", spaceships_path, class: "btn btn-info" %>
         <% else %>
