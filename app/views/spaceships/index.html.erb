@@ -13,7 +13,14 @@
           <p class="card-trip-pricing"> SC <%= spaceship.price %> </p>
           <%= image_tag "mars.png", class: "card-trip-user avatar-bordered" %>
         </div>
-        <%= link_to "Book now", spaceship_path(spaceship), class: "btn btn-info p-1 m-2" %>
+        <% if current_user.admin %>
+        <%= link_to "Add a Spaceship", new_spaceship_path, class: "btn btn-info p-1 m-2" %>
+        <div class="d-flex justify-content-between" ></div>
+        <%= link_to "Edit Spaceship", edit_spaceship_path(spaceship) , class: "btn btn-info p-1 m-2" %>
+        <%= link_to "Delete", spaceship_path(spaceship), method: :delete, class: "btn btn-info p-1 m-2" %>
+        <% else %>
+        <%= link_to "Book now", "#", class: "btn btn-info p-1 m-2" %>
+        <% end %>
       </div>
     <% end %>
   </div>
