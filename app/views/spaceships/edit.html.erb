@@ -1,1 +1,16 @@
-<h1> work in progress </h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 message">
+      <h4>Edit your spaceship</h4>
+
+      <%= simple_form_for @spaceship do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price, as: :string %>
+        <%= f.input :destination %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class: 'btn btn-info' %>
+      <% end %>
+      <%= link_to "Back", root_path %></div>
+    </div>
+  </div>
