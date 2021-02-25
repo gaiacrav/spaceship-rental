@@ -1,9 +1,10 @@
-<%= form_tag spaceships_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a spaceship or a destination"
-  %>
-  <%= submit_tag "Search", class: "btn btn-flat" %>
-<% end %>
+
+  <%= form_tag spaceships_path, class: 'search-form-control form-group', method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a spaceship or a destination"%>
+    <%= submit_tag "Search", class: "btn btn-flat" %>
+  <% end %>
+
 
