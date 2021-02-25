@@ -3,7 +3,11 @@
   <div class="row m-1">
     <% @spaceships.each do |spaceship|  %>
       <div class="card-trip col-sm-4 box">
-        <%= image_tag "ba-3000qx.jpg" %>
+        <% if spaceship.photo.attached? %>
+          <%= cl_image_tag(spaceship.photo.key) %>
+        <% else %>
+          <%= cl_image_tag("rogue-3kn.jpg") %>
+        <% end %>
         <div class="card-trip-infos">
           <div>
             <h2> <%= spaceship.name %> </h2>
