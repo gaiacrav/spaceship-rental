@@ -1,0 +1,9 @@
+<%= simple_form_for [@spaceship, @booking] do |f| %>
+  <div class="my-3 mx-3 px-3">
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :start_date, as: :date, class: "form-control" %>
+    <%= f.input :end_date, as: :date, class: "form-control" %>
+    <%= f.submit class: 'btn btn-success my-3' %>
+  </div>
+<% end %>

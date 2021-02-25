@@ -1,3 +1,8 @@
 <%= render "components/spaceship-show-card" %>
 <%= render "components/book-spaceship" %>
 
+<% if user_signed_in? %>
+<%= render "bookings/form"%>
+<% else %>
+<p class="my-3"> Sign in to make a booking </p>
+<% end %>
