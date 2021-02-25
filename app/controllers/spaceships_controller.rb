@@ -1,6 +1,6 @@
 class SpaceshipsController < ApplicationController
 
-# before_action :set_spaceship, only: [:show]
+ #before_action :set_spaceship, only: [:show]
 
   def index
     if params[:query].present?
@@ -29,10 +29,24 @@ class SpaceshipsController < ApplicationController
     end
  end
 
+ def edit
+  @spaceship = Spaceship.find(params[:id])
+  @spaceship.user.admin = current_user
+ end
+
+  def update
+    @spaceship = Spaceship.find(params[:id])
+    @spaceship.update(spaceship_params)
+
+    redirect_to spaceships_path
+  end
+
   def destroy
     @spaceship = Spaceship.find(params[:id])
+    @spaceship.user.admin = current_user
+
     @spaceship.destroy
-    redirect_to root_path
+    redirect_to spaceships_path
   end
 
   private
