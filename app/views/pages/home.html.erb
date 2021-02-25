@@ -1,8 +1,1 @@
 <%= render "components/banner-card" %>
-
-<% if current_user.admin %>
-        <%= link_to "Delete", spaceships_path, class: "btn btn-info" %>
-        <% else %>
-        <%= link_to "My Bookings", my_bookings_path, class: "btn btn-info p-1 m-2" %>
-<% end %>
-
