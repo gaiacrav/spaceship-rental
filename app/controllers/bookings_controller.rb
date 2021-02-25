@@ -21,9 +21,9 @@ class BookingsController < ApplicationController
 
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_params(@booking)
+      redirect_to spaceship_path(@spaceship), notice: "Your spaceship has been booked successfully!"
     else
-      render :new
+      render 'spaceships/show'
     end
  end
 
