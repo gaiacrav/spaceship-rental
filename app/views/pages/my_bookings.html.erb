@@ -1,10 +1,29 @@
-<h4> Hi <%= current_user.first_name %>!</h4>
-<h5> Your bookings: </h5>
+<div class="container my-2 px-1">
+  <h4> Hi <%= current_user.first_name %>!</h4>
 
-<% @bookings.each do |b| %>
-<%= b.spaceship.name %>
-<%= b.spaceship.destination %>
-<%= b.start_date.strftime("%d %b %Y") %>
-<%= b.end_date.strftime("%d %b %Y") %>
-<% end %>
+  <div class="row m-1">
+    <h5> Your bookings: </h5>
+  </div>
+
+
+  <% @bookings.each do |b| %>
+  <div class="row m-1">
+    <div class="card-product">
+      <% if b.spaceship.photo.attached? %>
+        <%= cl_image_tag(b.spaceship.photo.key) %>
+      <% else %>
+        <%= cl_image_tag("rogue-3kn.jpg") %>
+      <% end %>
+      <div class="card-product-infos">
+        <h6> Name of the spaceship: <strong> <%= b.spaceship.name %> </strong> </h6>
+        <h6> Destination: <strong> <%= b.spaceship.destination.capitalize %> </strong> </h6>
+        <h6> Departing on: <strong> <%= b.start_date.strftime("%d %b %Y") %> </strong> </h6>
+        <h6> Returning on: <strong> <%= b.end_date.strftime("%d %b %Y") %> </strong> </h6>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
 
