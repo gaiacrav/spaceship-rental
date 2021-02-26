@@ -27,10 +27,14 @@ user_gaia = User.create(
     admin: false
 )
 
-Spaceship.create(name: "Moon Light", destination: "moon", price: 8000, user_id:user_admin.id )
+
+spaceship1 = Spaceship.create(name: "Moon Light", destination: "moon", price: 8000, user_id:user_admin.id )
 Spaceship.create(name: "MarsX the red planet", destination: "mars", price: 70000, user_id:user_admin.id )
 Spaceship.create(name: "The smallest sun", destination: "mercury", price: 85000, user_id:user_admin.id )
 Spaceship.create(name: "Lover", destination: "venus", price: 50000, user_id:user_admin.id )
 Spaceship.create(name: "The ring", destination: "saturn", price: 90000, user_id:user_admin.id )
 Spaceship.create(name: "Far out", destination: "neptune", price: 100000, user_id:user_admin.id )
 Spaceship.create(name: "The 7th planet", destination: "uranus", price: 200000, user_id:user_admin.id )
+
+Booking.create(user_id: user_gaia.id, spaceship_id: spaceship1.id ,start_date: "Thu, 25 Feb 2021",
+  end_date: "Thu, 25 Feb 2021" )

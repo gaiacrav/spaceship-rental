@@ -3,7 +3,7 @@
   <%= link_to "Add a Spaceship", new_spaceship_path, class: "btn btn-success p-1 m-2" %>
 <% end %>
 
-<% if !current_user.admin %>
+<% if !user_signed_in? || (user_signed_in? && !current_user.admin) %>
   <h4 class="my-3"> Today's deals! </h4>
 <% end %>
 
@@ -13,7 +13,7 @@
         <% if spaceship.photo.attached? %>
           <%= cl_image_tag(spaceship.photo.key) %>
         <% else %>
-          <%= cl_image_tag("rogue-3kn.jpg") %>
+          <%= image_tag("rogue-3kn.jpg") %>
         <% end %>
         <div class="card-trip-infos">
           <div>
