@@ -11,7 +11,7 @@
       <% if b.spaceship.photo.attached? %>
         <%= cl_image_tag(b.spaceship.photo.key) %>
       <% else %>
-        <%= cl_image_tag("rogue-3kn.jpg") %>
+        <%= image_tag("rogue-3kn.jpg") %>
       <% end %>
       <div class="card-product-infos">
         <h6> Name of the spaceship: <strong> <%= b.spaceship.name %> </strong> </h6>
