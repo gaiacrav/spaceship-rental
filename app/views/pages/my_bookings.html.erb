@@ -1,0 +1,7 @@
+<% @bookings.each do |b| %>
+<%= b.spaceship.name %>
+<%= b.spaceship.destination %>
+<%= b.start_date.strftime("%d %b %Y") %>
+<%= b.end_date.strftime("%d %b %Y") %>
+<% end %>
+
