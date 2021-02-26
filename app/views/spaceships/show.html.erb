@@ -1,6 +1,6 @@
 <%= render "components/spaceship-show-card" %>
 
-<% if user_signed_in? && current_user.bookings.last.spaceship_id != params[:id].to_i %>
+<% if user_signed_in? && current_user.last_booked_spaceship_id != @spaceship.id %>
 <%= render "bookings/form"%>
 <% end %>
 
