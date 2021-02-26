@@ -1,11 +1,11 @@
 <div class="spaceship-show-card-trip">
-  <%= image_tag "galactica.jpg" %>
+  <%= cl_image_tag("galactica.jpg") %>
   <div class="spaceship-show-card-trip-infos">
     <div>
       <h2>Spaceship: <%=@spaceship.name%></h2>
       <h2>Destination: <%=@spaceship.destination.capitalize%></h2>
     </div>
     <h2 class="spaceship-show-card-trip-pricing">Just for <%=@spaceship.price%> SpaceCredits</h2>
-    <%= image_tag "venus.png", class: "spaceship-show-card-trip-user avatar-destination" %>
+    <%= cl_image_tag("venus.png"), class: "spaceship-show-card-trip-user avatar-destination" %>
   </div>
 </div>
