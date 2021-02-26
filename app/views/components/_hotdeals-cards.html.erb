@@ -2,11 +2,11 @@
   <div class="card-trip col-sm-4">
     <% if spaceship.photo.attached? %>
           <%= link_to spaceship_path(spaceship) do %>
-            <%= cl_image_tag(spaceship.photo.key), width: "100%", style: "max-height: 214px" %>
+            <%= cl_image_tag spaceship.photo.key, width: "100%", style: "max-height: 214px" %>
           <% end %>
         <% else %>
           <%= link_to spaceship_path(spaceship) do %>
-            <%= cl_image_tag("galactica.jpg"), width: "100%", style: "max-height: 214px" %>
+            <%= image_tag("galactica.jpg", width: "100%", style: "max-height: 214px") %>
           <% end %>
         <% end %>
     <div class="card-trip-infos">
@@ -16,10 +16,10 @@
         <p> Great deal! </p>
       </div>
         <p class="card-trip-pricing"> <%= spaceship.price%> SC</p>
-        <%= cl_image_tag("mars.png"), class: "card-trip-user avatar-destination" %>
+        <%= image_tag("mars.png", class: "card-trip-user avatar-destination") %>
     </div>
   </div>
-<%end%>
+<% end %>
 
 
 
