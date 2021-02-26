@@ -13,7 +13,7 @@
         <% if spaceship.photo.attached? %>
           <%= cl_image_tag(spaceship.photo.key) %>
         <% else %>
-          <%= image_tag("rogue-3kn.jpg") %>
+          <%= cl_image_tag("rogue-3kn.jpg") %>
         <% end %>
         <div class="card-trip-infos">
           <div>
@@ -21,7 +21,7 @@
             <p> Great deal! </p>
           </div>
           <p class="card-trip-pricing"> SC <%= spaceship.price %> </p>
-          <%= image_tag "earth.png", class: "card-trip-user avatar-bordered" %>
+          <%= cl_image_tag("earth.png"), class: "card-trip-user avatar-bordered" %>
         </div>
         <% if user_signed_in? && current_user.admin %>
         <div class="d-flex justify-content-between" ></div>
