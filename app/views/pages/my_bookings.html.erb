@@ -1,3 +1,6 @@
+<h4> Hi <%= current_user.first_name %>!</h4>
+<h5> Your bookings: </h5>
+
 <% @bookings.each do |b| %>
 <%= b.spaceship.name %>
 <%= b.spaceship.destination %>
