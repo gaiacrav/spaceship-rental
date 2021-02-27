@@ -14,10 +14,10 @@
         <%= image_tag("rogue-3kn.jpg") %>
       <% end %>
       <div class="card-product-infos">
-        <h6> Name of the spaceship: <strong> <%= b.spaceship.name %> </strong> </h6>
-        <h6> Destination: <strong> <%= b.spaceship.destination.capitalize %> </strong> </h6>
-        <h6> Departing on: <strong> <%= b.start_date.strftime("%d %b %Y") %> </strong> </h6>
-        <h6> Returning on: <strong> <%= b.end_date.strftime("%d %b %Y") %> </strong> </h6>
+        <p id="mybooking-text"> <strong> Name of the spaceship:</strong> <%= b.spaceship.name %> </p>
+        <p id="mybooking-text"> <strong> Destination:</strong> <%= b.spaceship.destination.capitalize %>  </p>
+        <p id="mybooking-text"> <strong>Departing on:</strong>  <%= b.start_date.strftime("%d %b %Y") %>  </p>
+        <p id="mybooking-text"> <strong>Returning on:</strong>  <%= b.end_date.strftime("%d %b %Y") %>  </p>
       </div>
     </div>
   </div>
